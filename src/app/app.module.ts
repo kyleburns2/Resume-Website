@@ -1,36 +1,62 @@
-/**
- * @license
- * Copyright Akveo. All Rights Reserved.
- * Licensed under the MIT License. See License.txt in the project root for license information.
- */
-import { APP_BASE_HREF } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
-import { CoreModule } from './@core/core.module';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { routing } from './app.routes';
+import { MatButtonModule, MatRadioModule, MatInputModule, MatMenuModule, MatCheckboxModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
-import { ThemeModule } from './@theme/theme.module';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { HomeComponent } from './dashboard/home/home.component';
+import 'hammerjs';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import { FigurecardComponent } from './shared/figurecard/figurecard.component';
+import { ImagecardComponent } from './shared/imagecard/imagecard.component';
+import { MsgIconBtnComponent } from './shared/msgiconbtn/msgiconbtn.component';
+import { RootComponent } from './dashboard/root/root.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { SettingsComponent } from './dashboard/settings/settings.component';
+import { WorkComponent } from './dashboard/work/work.component';
+import { EducationComponent } from './dashboard/education/education.component';
+import { ActivityComponent } from './dashboard/activity/activity.component';
+import { InterestComponent } from './dashboard/interest/interest.component';
+import { SettingsService } from './services/settings.service';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent,
+    WelcomeComponent,
+    SidebarComponent,
+    HomeComponent,
+    NavbarComponent,
+    FigurecardComponent,
+    ImagecardComponent,
+    MsgIconBtnComponent,
+    RootComponent,
+    HeaderComponent,
+    FooterComponent,
+    SettingsComponent,
+    WorkComponent,
+    EducationComponent,
+    ActivityComponent,
+    InterestComponent
+  ],
   imports: [
     BrowserModule,
+    FormsModule,
+    HttpModule,
+    routing,
     BrowserAnimationsModule,
-    HttpClientModule,
-    AppRoutingModule,
-
-    NgbModule.forRoot(),
-    ThemeModule.forRoot(),
-    CoreModule.forRoot(),
+    MatButtonModule,
+    MatRadioModule,
+    MatInputModule,
+    MatMenuModule,
+    MatCheckboxModule
   ],
-  bootstrap: [AppComponent],
-  providers: [
-    { provide: APP_BASE_HREF, useValue: '/' },
-  ],
+  providers: [SettingsService],
+  bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule { }
