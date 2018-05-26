@@ -24,6 +24,7 @@ import { ActivityComponent } from './dashboard/activity/activity.component';
 import { InterestComponent } from './dashboard/interest/interest.component';
 import { SettingsService } from './services/settings.service';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { PortfolioComponent } from './dashboard/portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
     WorkComponent,
     EducationComponent,
     ActivityComponent,
-    InterestComponent
+    InterestComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,

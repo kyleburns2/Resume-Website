@@ -10,6 +10,7 @@ import { EducationComponent } from './dashboard/education/education.component';
 import { ActivityComponent } from './dashboard/activity/activity.component';
 import { InterestComponent } from './dashboard/interest/interest.component';
 import { RootComponent } from './dashboard/root/root.component';
+import { PortfolioComponent } from './dashboard/portfolio/portfolio.component';
 
 const routes: Routes = [
   {path: '', component: WelcomeComponent},
@@ -19,6 +20,7 @@ const routes: Routes = [
     {path: 'education', component: EducationComponent},
     {path: 'activity', component: ActivityComponent},
     {path: 'interest', component: InterestComponent},
+    {path: 'portfolio', component: PortfolioComponent},
     {path: 'settings', component: SettingsComponent}
   ]}
 ];
