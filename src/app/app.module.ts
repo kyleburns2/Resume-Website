@@ -17,7 +17,6 @@ import { MsgIconBtnComponent } from './shared/msgiconbtn/msgiconbtn.component';
 import { RootComponent } from './dashboard/root/root.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
-import { SettingsComponent } from './dashboard/settings/settings.component';
 import { WorkComponent } from './dashboard/work/work.component';
 import { EducationComponent } from './dashboard/education/education.component';
 import { ActivityComponent } from './dashboard/activity/activity.component';
@@ -39,7 +38,6 @@ import { PortfolioComponent } from './dashboard/portfolio/portfolio.component';
     RootComponent,
     HeaderComponent,
     FooterComponent,
-    SettingsComponent,
     WorkComponent,
     EducationComponent,
     ActivityComponent,

@@ -4,7 +4,6 @@
 import { RouterModule, Routes } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { HomeComponent } from './dashboard/home/home.component';
-import { SettingsComponent } from './dashboard/settings/settings.component';
 import { WorkComponent } from './dashboard/work/work.component';
 import { EducationComponent } from './dashboard/education/education.component';
 import { ActivityComponent } from './dashboard/activity/activity.component';
@@ -20,8 +19,7 @@ const routes: Routes = [
     {path: 'education', component: EducationComponent},
     {path: 'activity', component: ActivityComponent},
     {path: 'interest', component: InterestComponent},
-    {path: 'portfolio', component: PortfolioComponent},
-    {path: 'settings', component: SettingsComponent}
+    {path: 'portfolio', component: PortfolioComponent}
   ]}
 ];
 
