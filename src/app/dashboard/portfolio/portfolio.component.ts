@@ -11,6 +11,7 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
   constructor() { }
 
   ngOnInit() {
+
   }
   ngAfterViewInit() {
     const preBtn = <HTMLElement>document.getElementById('preBtn');
@@ -49,12 +50,12 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
     for (let i = 0; i < tabs.length; i++) {
       (<HTMLElement>tabs[i]).style.display = 'none';
     }
-    if (this.tabIndex === 2) {
+    if(this.tabIndex === 2) {
       this.tabIndex--;
       moveTab.style.left = screenWidth > 990 ? '20vw' : '30vw';
       nextBtn.style.visibility = 'visible';
       moveTab.innerHTML = 'Page 2';
-    }else if (this.tabIndex === 1) {
+    } else if(this.tabIndex === 1) {
       this.tabIndex--;
       moveTab.style.left = '-1vw';
       preBtn.style.visibility = 'hidden';
